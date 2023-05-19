@@ -1,13 +1,20 @@
-package br.com.benezinho_holding;
+package br.com.holding.pessoa.model;
 
 import java.time.LocalDate;
 
 public class Pessoa {
+
     private Long id;
     private String nome;
     private LocalDate nascimento;
 
     public Pessoa() {
+    }
+
+    public Pessoa(Long id, String nome, LocalDate nascimento) {
+        this.id = id;
+        this.nome = nome;
+        this.nascimento = nascimento;
     }
 
     public Long getId() {
@@ -34,11 +41,6 @@ public class Pessoa {
         this.nascimento = nascimento;
     }
 
-    public Pessoa(Long id, String nome, LocalDate nascimento) {
-        this.id = id;
-        this.nome = nome;
-        this.nascimento = nascimento;
-    }
 
     @Override
     public String toString() {
